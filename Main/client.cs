@@ -8,7 +8,7 @@ Game game = new Game(new Range(1, 10));
 string wantsToPlay = "";
 while(!wantsToPlay.ToLower().StartsWith("n")){
     game.Play();
-    wantsToPlay = input.i("Wanna play agian? ");
+    wantsToPlay = input.i("Wanna play again? ");
     
 }
 static public class input
@@ -16,7 +16,12 @@ static public class input
     public static string i(string question = ""){
 
         Console.Write(question);
-        return Console.ReadLine();
+        string h = Console.ReadLine();
+        if(h == null)
+        {
+            h = "";
+        }
+        return h;
     }
 }
 
@@ -51,8 +56,8 @@ class Game : networkManager
             if(chosenNumber > CorrectNumber){
                 Console.WriteLine("Too high. Guess lower.");
             }
+            networkManager.sendnum(chosenNumber);
             chosenNumber =  Int32.Parse(input.i("Guess: "));
-
         }
 
         Console.WriteLine("Congratulations! You guessed the number in {0} guesses.", numGuesses);
