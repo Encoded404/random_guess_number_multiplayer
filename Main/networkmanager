@@ -6,8 +6,8 @@ using System.Threading;
 
 public struct playerString
 {
-    int playerID;
-    int guessedNumber;
+    public uint playerID;
+    public int guessedNumber;
 }
 
 public class networkManager
@@ -25,5 +25,8 @@ public class onlinePortListener
         hole2.Connect(serverIp);
         hole2.Receive(bytes);
         playerString ps = new playerString();
+        ps.playerID = Convert.ToUInt16(bytes[0]);
+        ps.guessedNumber = Convert.ToUInt16(bytes[1]);
+        return ps;
     }
 }
