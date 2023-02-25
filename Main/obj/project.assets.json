@@ -8,26 +8,24 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Aron\\.nuget\\packages\\": {}
+    "C:\\Users\\ellio\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aron\\OneDrive\\Documents\\GitHub\\random_guess_number_multiplayer\\Main\\Main.csproj",
+      "projectUniqueName": "C:\\Users\\ellio\\OneDrive\\Dokumenter\\GitHub\\random_guess_number_multiplayer\\Main\\Main.csproj",
       "projectName": "Main",
-      "projectPath": "C:\\Users\\Aron\\OneDrive\\Documents\\GitHub\\random_guess_number_multiplayer\\Main\\Main.csproj",
-      "packagesPath": "C:\\Users\\Aron\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aron\\OneDrive\\Documents\\GitHub\\random_guess_number_multiplayer\\Main\\obj\\",
+      "projectPath": "C:\\Users\\ellio\\OneDrive\\Dokumenter\\GitHub\\random_guess_number_multiplayer\\Main\\Main.csproj",
+      "packagesPath": "C:\\Users\\ellio\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ellio\\OneDrive\\Dokumenter\\GitHub\\random_guess_number_multiplayer\\Main\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Aron\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\ellio\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -61,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
