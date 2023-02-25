@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 
-public class printTools
+public class Tools
 {
 
     static string input = "10";
