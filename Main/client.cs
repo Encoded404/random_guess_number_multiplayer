@@ -21,7 +21,8 @@ static public class input
 }
 
 
-class Game{
+class Game : networkManager
+{
     System.Random random = new System.Random();
     private Range range;
     private int CorrectNumber;

@@ -1,14 +1,17 @@
-﻿using System;
-using System.Threading;
+﻿string input = "10";
 
-Console.WriteLine("Hello, World!");
-
-
-void ThreadProc(){
-    Thread.Sleep(2000);
-    Console.WriteLine("rg");
+void print(string s){
+    Console.SetCursorPosition(0, Console.CursorTop - 1);
+    Console.WriteLine(s);
+    Console.SetCursorPosition(0, 0);
+    Console.WriteLine(input);
 }
-Thread t = new Thread(new ThreadStart(ThreadProc));
 
-Console.ReadLine();
+Console.Clear();
+Console.WriteLine("");
 
+print("wf");
+
+// he is cool
+// lala
+// 10
