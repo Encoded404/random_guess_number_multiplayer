@@ -35,7 +35,7 @@ public class printTools
         
         // Cancel the token
     }
-    static void setup(){
+    static public void setup(){
 
         Thread t = new Thread(MonitorKeypress);
 
