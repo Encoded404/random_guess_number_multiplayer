@@ -1,11 +1,17 @@
-
-
+using System;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading;
 public class networkManager
 {
-
+    Socket hole1 = new Socket(SocketType.Stream, ProtocolType.Tcp);
 }
 
-public class onlineListener
+public class onlinePortListener
 {
-
+    EndPoint 
+    Socket hole2 = new Socket(SocketType.Stream, ProtocolType.Tcp);
+    hole2.Connect();
+    hole2.Receive();
 }
