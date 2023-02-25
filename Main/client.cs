@@ -16,7 +16,12 @@ static public class input
     public static string i(string question = ""){
 
         Console.Write(question);
-        return Console.ReadLine();
+        string h = Console.ReadLine();
+        if(h == null)
+        {
+            h = "";
+        }
+        return h;
     }
 }
 
