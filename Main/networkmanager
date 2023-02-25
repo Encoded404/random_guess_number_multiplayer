@@ -20,9 +20,10 @@ public class onlinePortListener
     IPEndPoint serverIp = new IPEndPoint(IPAddress.Parse("127.0.0.0"),4786);
     Socket hole2 = new Socket(SocketType.Stream, ProtocolType.Tcp);
     byte[] bytes = new byte[2];
-    public void Main()
+    public playerString Main()
     {
         hole2.Connect(serverIp);
         hole2.Receive(bytes);
+        playerString ps = new playerString();
     }
 }
