@@ -1,0 +1,49 @@
+# Build artifacts
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.vs/
+*.csproj.user
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+
+# NuGet Packages
+*.nupkg
+packages/
+
+# MSTest test Results
+TestResults/
+
+# Visual Studio code coverage results
+*.coverage
+*.coveragexml
+
+# Visual Studio files
+*.visualstudio
+*.vscode
+
+# Resharper files
+_ReSharper*/
+
+# Windows generated files
+Thumbs.db
+Desktop.ini
+
+# Files and directories that should not be included in source control
+*.log
+*.bak
+*.cache
+*.json
+*.tmp
+*.pidb
+*.userprefs
+*.vspscc
+*.vssscc
+*.vshost.exe
+*.vshost.exe.manifest
