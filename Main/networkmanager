@@ -12,16 +12,16 @@ public struct playerString
 
 public class networkManager
 {
-    Thread trd1 = new Thread(onlinePortListener);
+    Thread trd1 = new Thread(onlinePortListener.Main);
     Socket hole1 = new Socket(SocketType.Stream, ProtocolType.Tcp);
 }
 
 public class onlinePortListener
 {
-    IPEndPoint serverIp = new IPEndPoint(IPAddress.Parse("127.0.0.0"),4786);
-    Socket hole2 = new Socket(SocketType.Stream, ProtocolType.Tcp);
     public static playerString Main()
     {
+        IPEndPoint serverIp = new IPEndPoint(IPAddress.Parse("127.0.0.0"),4786);
+        Socket hole2 = new Socket(SocketType.Stream, ProtocolType.Tcp);
         byte[] bytes = new byte[2];
         hole2.Connect(serverIp);
         hole2.Receive(bytes);
