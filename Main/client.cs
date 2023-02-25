@@ -1,4 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System;
+using System.Threading;
 Console.WriteLine("Hello, World!");
 
 Game game = new Game(new Range(1, 10));
