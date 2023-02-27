@@ -12,22 +12,56 @@ public struct playerString
 
 public class networkManager
 {
-    Thread trd1 = new Thread(onlinePortListener.Main);
+    Thread trd1 = new Thread(recieve_DontUseOutsideNetworkManagerClass);
     Socket hole1 = new Socket(SocketType.Stream, ProtocolType.Tcp);
-}
-
-public class onlinePortListener
-{
-    public static playerString Main()
+    public bool connectToServer()
     {
-        IPEndPoint serverIp = new IPEndPoint(IPAddress.Parse("127.0.0.0"),4786);
-        Socket hole2 = new Socket(SocketType.Stream, ProtocolType.Tcp);
+        try
+        {
+            bool b = connect_DontUseOutsideNetworkManagerClass();
+            if(!b)
+            {
+                return false;
+            }
+        }
+        catch
+        {
+            return false;
+        }
+        return true;
+        //trd1.Start();
+    }
+
+
+    private void startRecievingData()
+    {
+
+    }
+    IPEndPoint serverIp = new IPEndPoint(IPAddress.Parse("127.0.0.0"),4786);
+    Socket hole2 = new Socket(SocketType.Stream, ProtocolType.Tcp);
+    private bool connect_DontUseOutsideNetworkManagerClass()
+    {
+        try
+        {
+            hole2.Connect(serverIp);
+        }
+        catch
+        {
+            return false;
+        }
+        return true;
+    }
+    public void recieve_DontUseOutsideNetworkManagerClass()
+    {
         byte[] bytes = new byte[2];
-        hole2.Connect(serverIp);
         hole2.Receive(bytes);
         playerString ps = new playerString();
         ps.playerID = Convert.ToUInt16(bytes[0]);
         ps.guessedNumber = Convert.ToUInt16(bytes[1]);
-        return ps;
+        //return ps;
     }
+}
+
+public class onlinePortListener
+{
 }
