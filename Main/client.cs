@@ -3,15 +3,22 @@ using System;
 using System.Threading;
 printTools.setup();
 printTools.print("r");
-Console.WriteLine("Hello, World!");
 
+Start();
 Game game = new Game(new Range(1, 10));
-
 string wantsToPlay = "";
+static string Username;
 while(!wantsToPlay.ToLower().StartsWith("n")){
     game.Play();
     wantsToPlay = input.i("Wanna play again? ");
     
+}
+
+class Start : networkManager
+{
+   Console.WriteLine("Enter your username:");
+   Username = Console.ReadLine();
+   networkManager.connectToServer();
 }
 static public class input
 {
@@ -30,6 +37,7 @@ static public class input
 
 class Game : networkManager
 {
+    
     System.Random random = new System.Random();
     private Range range;
     private int CorrectNumber;
