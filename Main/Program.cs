@@ -51,26 +51,26 @@ public class Tools
 
 
     // ... Launch other async tasks ...
-    void Main()
+    static public void Main()
     {
-        print("wf");
-        Thread.Sleep(1000);
-        print("hej");
-        Thread.Sleep(1000);
-        print("du");
-        Thread.Sleep(1000);
-        print("wf");
-        Thread.Sleep(1000);
-        print("hej");
-        Thread.Sleep(1000);
-        print("du");
-        Thread.Sleep(1000);
-        print("wf");
-        Thread.Sleep(1000);
-        print("hej");
-        Thread.Sleep(1000);
-        print("du");
-        Thread.Sleep(1000);
+        // print("wf");
+        // Thread.Sleep(1000);
+        // print("hej");
+        // Thread.Sleep(1000);
+        // print("du");
+        // Thread.Sleep(1000);
+        // print("wf");
+        // Thread.Sleep(1000);
+        // print("hej");
+        // Thread.Sleep(1000);
+        // print("du");
+        // Thread.Sleep(1000);
+        // print("wf");
+        // Thread.Sleep(1000);
+        // print("hej");
+        // Thread.Sleep(1000);
+        // print("du");
+        // Thread.Sleep(1000);
     }
     // Waits for the keypress to end it all
 

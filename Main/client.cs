@@ -1,8 +1,25 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
 using System.Threading;
-printTools.setup();
-printTools.print("r");
+Tools.setup();
+Tools.print("a");
+Thread.Sleep(1000);
+Tools.print("b");
+Thread.Sleep(1000);
+Tools.print("c");
+Thread.Sleep(1000);
+Tools.print("d");
+Thread.Sleep(1000);
+Tools.print("a");
+Thread.Sleep(1000);
+Tools.print("b");
+Thread.Sleep(1000);
+Tools.print("c");
+Thread.Sleep(1000);
+Tools.print("d");
+Thread.Sleep(1000);
+
+
 Console.WriteLine("Hello, World!");
 
 Game game = new Game(new Range(1, 10));
@@ -58,7 +75,7 @@ class Game : networkManager
             if(chosenNumber > CorrectNumber){
                 Console.WriteLine("Too high. Guess lower.");
             }
-            networkManager.sendnum(chosenNumber);
+            // networkManager.sendnum(chosenNumber);
             chosenNumber =  Int32.Parse(input.i("Guess: "));
         }
 
