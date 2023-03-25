@@ -2,33 +2,29 @@
 using System;
 using System.Threading;
 Tools.setup();
-Tools.print("a");
-Thread.Sleep(1000);
-Tools.print("b");
-Thread.Sleep(1000);
-Tools.print("c");
-Thread.Sleep(1000);
-Tools.print("d");
-Thread.Sleep(1000);
-Tools.print("a");
-Thread.Sleep(1000);
-Tools.print("b");
-Thread.Sleep(1000);
-Tools.print("c");
-Thread.Sleep(1000);
-Tools.print("d");
-Thread.Sleep(1000);
+Tools.print("r");
 
-
-Console.WriteLine("Hello, World!");
-
+Start start = new Start();
 Game game = new Game(new Range(1, 10));
-
 string wantsToPlay = "";
+//Maybe static
 while(!wantsToPlay.ToLower().StartsWith("n")){
     game.Play();
     wantsToPlay = input.i("Wanna play again? ");
     
+}
+
+
+class Start : networkManager
+{
+    static string Username;
+
+   public Start(){
+        Console.WriteLine("Enter your username:");
+        Username = Console.ReadLine();
+        networkManager.connectToServer();
+   }
+
 }
 static public class input
 {
@@ -47,6 +43,7 @@ static public class input
 
 class Game : networkManager
 {
+    
     System.Random random = new System.Random();
     private Range range;
     private int CorrectNumber;
@@ -75,7 +72,7 @@ class Game : networkManager
             if(chosenNumber > CorrectNumber){
                 Console.WriteLine("Too high. Guess lower.");
             }
-            // networkManager.sendnum(chosenNumber);
+          //send the num to networkmanager  networkManager.sendnum(chosenNumber);
             chosenNumber =  Int32.Parse(input.i("Guess: "));
         }
 
